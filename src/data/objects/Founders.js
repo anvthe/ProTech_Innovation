@@ -20,7 +20,7 @@ const founders = [
         id: 3,
         img: Founder3,
         name: "Amana Akter",
-        role: "CTO",
+        role: "Founder",
     },
 ];
 
