@@ -34,8 +34,11 @@ export default function Footer() {
       </div>
 
       <div className="w-full md:w-5/6 lg:w-4/5 xl:w-5xl 2xl:w-7xl flex flex-col md:flex-row items-center justify-between pt-10 border-t-[1px] border-gray-200 text-sm mt-8 px-2">
-  <span className="text-center md:text-left text-gray-30 text-gray-400">© 2025 ProTech Innovation. All rights reserved.</span>
-        <div className="flex justify-center space-x-4 mt-4 md:mt-0 ">
+  <span className="text-center md:text-left text-gray-400">
+  © {new Date().getFullYear()} ProTech Innovation. All rights reserved.
+</span>
+
+          <div className="flex justify-center space-x-4 mt-4 md:mt-0 ">
           <a href="#" className="text-gray-400 hover:text-white text-xl"><FaXTwitter /></a>
           <a href="#" className="text-gray-400 hover:text-white text-xl"><FaLinkedinIn /></a>
           <a href="#" className="text-gray-400 hover:text-white text-xl"><FaFacebookF /></a>
