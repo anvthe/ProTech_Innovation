@@ -16,6 +16,7 @@ import Subscription from "@/components/ui/Subscription";
 import TechnologySolutions from "@/components/ui/Services";
 import Techrain from '@/components/ui/Techrain'
 import TestimonialSection from "@/components/ui/ClientTestimonials";
+import Founder from "@/components/ui/Founder";
 
 // import OurLocations from "@/components/OurLocation";
 
@@ -46,6 +47,7 @@ export default function Home() {
         <div className="relative w-full h-auto">
           <MilestoneSection />
           <TestimonialSection />
+            <Founder />
         </div>
 
         <div className="relative w-full h-auto">

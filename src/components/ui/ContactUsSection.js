@@ -1,6 +1,6 @@
 import { LuMail, LuPhone } from "react-icons/lu";
 import { useForm, ValidationError } from "@formspree/react";
-
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function ContactUs() {
   const contactdetails = [
@@ -9,15 +9,15 @@ export default function ContactUs() {
       icon: <LuMail />,
       title: "Email",
       description: "Our friendly team is here to help.",
-      link: "info@devtechfusion.com",
+      link: "protech@gmail.com",
     },
-    {
-      id: 2,
-      icon: <LuPhone />,
-      title: "Phone",
-      description: "Mon-Fri from 8am to 5pm.",
-      link: "0314-9370777",
-    },
+      {
+          id: 2,
+          icon: <FaWhatsapp />,
+          title: "WhatsApp",
+          description: "Mon-Fri from 9am to 6pm.",
+          link: ["+880 1619 109909", "+49 1575 4255758"],
+      },
   ];
 
   return (
@@ -33,29 +33,49 @@ export default function ContactUs() {
           </p>
 
           <div className="mt-6 flex flex-col item-center justify-center md:flex-row md:space-x-6 lg:flex-col space-y-6">
-            {contactdetails.map((contact) => (
-              <div key={contact.id} className="bg-[#211951]  w-3/4 rounded-lg flex items-center relative z-0 space-x-4">
-                <div className="bg-white z-20 rounded-lg cursor-pointer  border border-[#211951] w-full h-full relative p-5 transition-transform md:hover:translate-y-[-8px] md:hover:translate-x-[-8px]">
-                <span className="text-[#211951] text-xl sm:text-2xl">
-                  {contact.icon}
-                </span>
-                <div>
-                  <h3 className="font-semibold text-gray-800 text-lg">
-                    {contact.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm sm:text-base">
-                    {contact.description}
-                  </p>
-                  <a
-                    href={contact.id === 1 ? "mailto:" + contact.link : "tel:" + contact.link}
-                    className="text-[#211951] font-semibold"
-                  >
-                    {contact.link}
-                  </a>
-                </div>
-                </div>
-              </div>
-            ))}
+              {contactdetails.map((contact) => {
+                  // make sure link is always an array
+                  const links = Array.isArray(contact.link) ? contact.link : [contact.link];
+
+                  return (
+                      <div
+                          key={contact.id}
+                          className="bg-[#211951] w-3/4 rounded-lg flex items-center relative z-0 space-x-4"
+                      >
+                          <div className="bg-white z-20 rounded-lg cursor-pointer border border-[#211951] w-full h-full relative p-5 transition-transform md:hover:translate-y-[-8px] md:hover:translate-x-[-8px]">
+        <span className="text-[#211951] text-xl sm:text-2xl">
+          {contact.icon}
+        </span>
+                              <div>
+                                  <h3 className="font-semibold text-gray-800 text-lg">{contact.title}</h3>
+                                  <p className="text-gray-600 text-sm sm:text-base">{contact.description}</p>
+
+                                  {/* Render multiple links stacked */}
+                                  <div className="flex flex-col mt-1 space-y-1">
+                                      {links.map((item, idx) => (
+                                          <a
+                                              key={idx}
+                                              href={
+                                                  contact.id === 1
+                                                      ? "mailto:" + item
+                                                      : "https://wa.me/" + item.replace(/\D/g, "")
+                                              }
+                                              target="_blank"
+                                              rel="noopener noreferrer"
+                                              className={`font-semibold ${
+                                                  contact.id === 2 ? "text-[#25D366]" : "text-[#211951]"
+                                              } hover:underline`}
+                                          >
+                                              {item}
+                                          </a>
+                                      ))}
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  );
+              })}
+
           </div>
         </div>
 

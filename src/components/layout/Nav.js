@@ -33,7 +33,7 @@ const Nav = ({ mobileClose }) => {
           <Link
             key={i}
             href={item.href}
-            className="nav-link text-gray-700 font-['SatoshiVariable'] py-2 md:py-5 px-4 rounded-xl transition-all duration-200 ease-in-out hover:text-black hover:bg-gray-100 hover:shadow-md"
+            className="nav-link text-gray-700 font-['SatoshiVariable'] py-2 md:py-5 px-4 rounded-xl transition-all duration-200 ease-in-out hover:text-pink-600 hover:bg-gray-300 hover:shadow-md"
             onClick={mobileClose}
             style={{
               boxShadow: '0 2px 8px rgba(80,0,200,0.08)',
