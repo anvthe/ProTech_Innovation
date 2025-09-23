@@ -87,7 +87,7 @@ const Hero = () => {
             />
             <h1
               ref={headingRef}
-              className="text-white mt-10 md:mt-0 text-center text-3xl md:text-[44px] lg:text-5xl 2xl:text-6xl font-black font-['SatoshiVariable']"
+              className="text-white mt-10 md:mt-0 text-center text-1.5xl md:text-[44px] lg:text-5xl 2xl:text-6xl font-black font-['SatoshiVariable']"
               aria-label="Empowering Your Vision With Future-Ready IT Solutions"
             >
               <span className="inline-block">

@@ -1,6 +1,6 @@
 const educationDetails = [
     {
-        title: "Varsity Pet Projects",
+        title: "University Pet Projects",
         description:
             "We worked on fun and experimental projects during our university journey — from small apps to quirky prototypes that shaped our creativity.",
     },
