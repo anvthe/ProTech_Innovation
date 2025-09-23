@@ -1,62 +1,55 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-export default function CalendlyPopupButton() {
-  const [ready, setReady] = useState(false);
+export default function CalendlyPopupButton({ text = "Book A Free Consultation", className = "" }) {
+    const [ready, setReady] = useState(false);
 
-  
+    useEffect(() => {
+        const waitForCalendly = setInterval(() => {
+            if (typeof window !== 'undefined' && window.Calendly) {
+                setReady(true);
+                clearInterval(waitForCalendly);
+            }
+        }, 200);
 
-  useEffect(() => {
-    const waitForCalendly = setInterval(() => {
-      if (typeof window !== 'undefined' && window.Calendly) {
-        setReady(true);
-        clearInterval(waitForCalendly);
-      }
-    }, 200);
+        return () => clearInterval(waitForCalendly);
+    }, []);
 
-    return () => clearInterval(waitForCalendly);
-  }, []);
+    const handleClick = () => {
+        if (window.Calendly) {
+            if (document.querySelector('.calendly-overlay')) {
+                document.querySelector('.calendly-overlay').remove();
+            }
 
-  const handleClick = () => {
-    if (window.Calendly) {
-      if (document.querySelector('.calendly-overlay')) {
-        document.querySelector('.calendly-overlay').remove();
-      }
+            window.Calendly.initPopupWidget({
+                url: 'https://calendly.com/devtechfusion?hide_gdpr_banner=1',
+            });
+        }
+    };
 
-      window.Calendly.initPopupWidget({
-        url: 'https://calendly.com/devtechfusion?hide_gdpr_banner=1',
-      });
-    }
-  };
-
-  return (
-    // <AnimatedButton
-    //   text={'Get Your Personalized Tech Roadmap'}
-    //   handleClick={handleClick}
-    //   ready={ready}
-    // />
-    <button
-      onClick={handleClick} 
-      disabled={!ready}
-      className={`px-6 py-3 rounded-lg font-semibold cursor-pointer ${
-        ready
-          ? 'bg-transparent backdrop-blur-sm border border-white text-white hover:bg-white hover:text-[#211951] overflow-hidden group'
-          : 'bg-gray-100 cursor-not-allowed'
-      }`}
-       >
+    return (
+        <button
+            onClick={handleClick}
+            disabled={!ready}
+            className={
+                ready
+                    ? className
+                    : "bg-gray-100 cursor-not-allowed px-6 py-3 rounded-xl font-bold"
+            }
+        >
       <span className="flex flex-col items-center justify-center relative">
-      Get Your Personalized Tech Roadmap
+        {text}
       </span>
-    </button>
-  );
+        </button>
+    );
 }
 
 
 // const AnimatedButton = ({text, handleClick, ready}) => {
 //   return (
 //     <button
-//       onClick={handleClick} 
+//       onClick={handleClick}
 //       disabled={!ready}
 //       className={`px-6 py-3 rounded-lg font-semibold cursor-pointer ${
 //         ready

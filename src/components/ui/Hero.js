@@ -105,16 +105,12 @@ const Hero = () => {
             <p className="w-5/6 text-base xl:text-base 2xl:text-xl mt-2 2xl:mt-10 text-white text-center">
               We shape great ideas into reality with the force of digital technology and future-proof IT solutions.
             </p>
-            <div className="flex flex-col md:flex-row gap-4 items-center justify-center mt-4">
-              {/*<CalendlyPopupButton />*/}
-              <a
-                href="#contact"
-                className="px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white font-bold shadow-lg hover:scale-105 transition-transform duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                aria-label="Contact ProTech Innovation"
-              >
-                Contact Us
-              </a>
-            </div>
+              <div className="flex flex-col md:flex-row gap-4 items-center justify-center mt-4">
+                  <CalendlyPopupButton
+                      text="Book A Free Consultation"
+                      className="px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white font-bold shadow-lg hover:scale-105 transition-transform duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  />
+              </div>
           </div>
             </div>
   );

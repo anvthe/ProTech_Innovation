@@ -2,6 +2,7 @@
 import Founder1 from "@/assets/39824530.jpg";
 import Founder2 from "@/assets/39824532.jpeg";
 import Founder3 from "@/assets/39824533.jpeg";
+import Founder4 from "@/assets/creators.jpg";
 
 const founders = [
     {
@@ -14,13 +15,19 @@ const founders = [
         id: 2,
         img: Founder1,
         name: "Pratik Mondal",
-        role: "Founder",
+        role: "Co-Founder & Head of Technical Consultant",
     },
     {
         id: 3,
         img: Founder3,
         name: "Amana Akter",
-        role: "CTO",
+        role: "Co-Founder & CTO",
+    },
+    {
+        id: 4,
+        img: Founder4,
+        name: "Shraboni Saha Puja",
+        role: "Head of Product Design",
     },
 ];
 
