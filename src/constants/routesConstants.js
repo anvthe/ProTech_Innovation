@@ -4,8 +4,10 @@ export const ROUTES_CONSTANTS = {
     SERVICES: "",
     WHY_US: "/why-us",
     PRODUCTS: "/products",
+    EDUCATIONS: "/educations",
     TESTIMONIALS: "/testimonials",
     BLOG: "/blog",
+
 
     BRANDING: "/services/branding",
     DEVELOPMENT: "/services/development",

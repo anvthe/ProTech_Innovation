@@ -17,6 +17,8 @@ import TechnologySolutions from "@/components/ui/Services";
 import Techrain from '@/components/ui/Techrain'
 import TestimonialSection from "@/components/ui/ClientTestimonials";
 import Founder from "@/components/ui/Founder";
+import Educations from "@/components/ui/Educations";
+
 
 // import OurLocations from "@/components/OurLocation";
 
@@ -41,6 +43,7 @@ export default function Home() {
           {/* <Techrain count={40} /> */}
           <TechnologySolutions />
           <ProjectShowcase />
+            <Educations/>
           <HowWeWork />
         </div>
 
