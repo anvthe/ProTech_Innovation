@@ -1,33 +1,33 @@
 const educationDetails = [
     {
-        title: "Branding & UI/UX Design",
+        title: "Varsity Pet Projects",
         description:
-            "A weak brand and poor user experience can drive customers away. We craft compelling brand identities and intuitive designs that captivate audiences and foster engagement.",
+            "We worked on fun and experimental projects during our university journey — from small apps to quirky prototypes that shaped our creativity.",
     },
     {
-        title: "Product Development",
+        title: "University Assignments",
         description:
-            "Many products fail due to poor planning and execution. We turn ideas into market-ready solutions with an agile, structured approach from concept to launch.",
+            "Assignments were more than tasks — they were opportunities to learn, test new tools, and refine our coding and problem-solving skills.",
     },
     {
-        title: "E-Commerce Solutions",
+        title: "Thesis Works",
         description:
-            "Slow, outdated, or insecure stores lead to lost sales. We build scalable, mobile-first e-commerce platforms with seamless integrations and secure payment processing.",
+            "Our thesis projects pushed us to dive deep into research, explore cutting-edge technologies, and solve real-world challenges with academic rigor.",
     },
     {
-        title: "Cloud Services",
+        title: "Research Papers",
         description:
-            "Traditional IT limits growth and efficiency. We optimize operations with cloud migration, infrastructure management, and cloud-native development for agility and scalability.",
+            "We contributed to the academic community through research and publications, showcasing our ideas and innovative problem-solving approaches.",
     },
     {
-        title: "Cyber-Security Solutions",
+        title: "Hackathons & Competitions",
         description:
-            "Cyber threats can cripple businesses. We provide robust security solutions, from threat detection to compliance, ensuring your data and reputation stay protected.",
+            "From coding marathons to tech challenges, we tested our skills, collaborated under pressure, and built solutions that impressed mentors and judges.",
     },
     {
-        title: "Digital Marketing",
+        title: "Freelance & Side Projects",
         description:
-            "Poor visibility means lost opportunities. We drive results with data-driven SEO, social media, and content strategies to connect you with the right audience.",
+            "Beyond academics, we explored real-world freelance projects, sharpening our skills with practical industry-driven experiences.",
     },
 ];
 
