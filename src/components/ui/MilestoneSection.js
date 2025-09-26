@@ -12,6 +12,7 @@ export default function MilestoneSection() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    const ref = sectionRef.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
@@ -19,13 +20,13 @@ export default function MilestoneSection() {
       { threshold: 0.5 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    if (ref) {
+      observer.observe(ref);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (ref) {
+        observer.unobserve(ref);
       }
     };
   }, []);
@@ -47,7 +48,7 @@ export default function MilestoneSection() {
           <div className="grid grid-cols-1 text-center md:grid-cols-2 md:gap-x-40 lg:gap-x-5 md:gap-y-5 lg:grid-cols-2 gap-y-5 mt-4">
             {[{ end: 5, suffix: "+", text: "Projects Completed" },
               { end: 10, suffix: "", text: "Secured worldwide" },
-              { end: 3, suffix: "", text: "Professional Members" },
+              { end: 4, suffix: "", text: "Professional Members" },
               { end: 5, suffix: "+", text: "5-star Reviews" }].map((item, index) => (
               <motion.div
                 key={index}
@@ -83,5 +84,5 @@ function CountUp({ end, suffix = "" }) {
       return () => clearInterval(interval);
     }, [end]);
 
-  return <span className="text-[#211951]  md:text-3xl 2xl:text-4xl text-center font-bold mb-3 block">{count}{suffix}</span>;
+  return <span className="text-[#211951]  md:text-3xl 2xl:text-4xl text-center font-bold mb-3 block" aria-label={`Milestone count: ${count}${suffix}`}>{count}{suffix}</span>;
 }

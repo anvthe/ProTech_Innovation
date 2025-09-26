@@ -46,6 +46,7 @@ const Navbar = () => {
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden text-gray-700 z-50 transition-transform duration-1000 ease p-2 focus:outline-none"
+          aria-label="Toggle navigation"
         >
           {isOpen ? <IoClose size={30} /> : <IoMenu size={30} />}
         </button>

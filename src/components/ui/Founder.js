@@ -25,13 +25,14 @@ export default function Founder() {
             </div>
 
             {/* Founder Cards */}
-            <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto relative z-10">
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 max-w-4xl mx-auto relative z-10">
                 {founders.map((founder) => (
                     <div
                         key={founder.id}
-                        className="group bg-white border border-gray-200 rounded-2xl shadow-md hover:shadow-2xl
-                       transition-all duration-500 p-10 flex flex-col items-center text-center
+                        className="group bg-white border border-gray-300 rounded-2xl shadow-md hover:shadow-2xl
+                       transition-all duration-500 p-6 md:p-10 flex flex-col items-center text-center
                        hover:-translate-y-2"
+                        aria-label="Founder profile"
                     >
                         {/* Profile Image */}
                         <div className="overflow-hidden rounded-full mb-6">

@@ -9,12 +9,13 @@ const Nav = ({mobileClose}) => {
     const [isDropdownOpen, setDropdownOpen] = useState(false);
 
     const navItems = [
-        {label: 'Home', href: ROUTES_CONSTANTS.HOME},
-        {label: 'Services', href: '/#services'},
-        {label: 'Projects', href: '/#projects'},
-        {label: 'Educations', href: '/#educations'},
-        {label: 'Testimonials', href: '/#customer-review'},
-        {label: 'Contact', href: '/#contact'},
+    {label: 'Home', href: ROUTES_CONSTANTS.HOME},
+    {label: 'Services', href: '/#services'},
+    {label: 'Projects', href: '/#projects'},
+    {label: 'Educations', href: '/#educations'},
+    {label: 'Testimonials', href: '/#customer-review'},
+    {label: 'Our Team', href: '/#founders'},
+    {label: 'Contact', href: '/#contact'},
 
     ];
 

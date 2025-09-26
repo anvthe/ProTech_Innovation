@@ -43,7 +43,7 @@ export default function ContactUs() {
                           className="bg-[#211951] w-3/4 rounded-lg flex items-center relative z-0 space-x-4"
                       >
                           <div className="bg-white z-20 rounded-lg cursor-pointer border border-[#211951] w-full h-full relative p-5 transition-transform md:hover:translate-y-[-8px] md:hover:translate-x-[-8px]">
-        <span className="text-[#211951] text-xl sm:text-2xl">
+        <span className="text-[#211951] text-xl sm:text-2xl" aria-label={contact.title + ' icon'}>
           {contact.icon}
         </span>
                               <div>
@@ -62,9 +62,9 @@ export default function ContactUs() {
                                               }
                                               target="_blank"
                                               rel="noopener noreferrer"
-                                              className={`font-semibold ${
-                                                  contact.id === 2 ? "text-[#25D366]" : "text-[#211951]"
-                                              } hover:underline`}
+                        className={`font-semibold ${
+                          contact.id === 2 ? "text-gray-800" : "text-[#211951]"
+                        } hover:underline`}
                                           >
                                               {item}
                                           </a>

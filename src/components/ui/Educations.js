@@ -44,6 +44,7 @@ export default function Educations() {
                         <SwiperSlide
                             key={index}
                             className="w-[280px] sm:w-[320px] md:w-[360px] lg:w-[400px]"
+                            aria-label={`Academic & Research Work Slide ${index + 1}`}
                         >
                             <motion.div
                                 initial={{ opacity: 0, y: 30 }}
@@ -60,7 +61,7 @@ export default function Educations() {
                                     delay: index * 0.1,
                                     duration: 0.5,
                                 }}
-                                className="relative overflow-hidden bg-gradient-to-br from-purple-600 via-pink-500 to-red-500 p-[2px] shadow-xl"
+                                className="relative overflow-hidden shadow-xl"
                             >
                                 <div className="bg-black h-full w-full p-8 flex flex-col text-left">
                                     <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
