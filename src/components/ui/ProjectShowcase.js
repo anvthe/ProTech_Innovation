@@ -12,13 +12,13 @@ const projects = [
     title: "Aptitudo AI Hiring Platform",
     description: "Aptitudo is an AI-powered hiring platform with customizable skill assessments, bias-free and data-driven recruitment, ATS integration, and real-time analytics. It supports startups and enterprises with scalable plans and a seamless user experience.",
     image: "/ProjectImages/DevPOS-Favicon.svg",
-    link: "https://www.aptitudo.ca/"
+    link: " "
   },
   {
     title: "🚨 Enterprise Emergency Service Platform",
     description: "Enterprise emergency services mapping platform for improved user engagement (+40% MAU). Reliable, real-time coordination and analytics for critical response teams.",
     image: "/ProjectImages/Technado-Favicon.svg",
-    link: "https://shongjog.brac.net/"
+    link: " "
   }
 ];
 
