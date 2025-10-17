@@ -9,7 +9,7 @@ export default function ContactUs() {
       icon: <LuMail />,
       title: "Email",
       description: "Our friendly team is here to help.",
-      link: "protech@gmail.com",
+      link: "ihrkr@yahoo.com",
     },
       {
           id: 2,
